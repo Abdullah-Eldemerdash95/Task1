@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import './App.css';
-import 'react-sticky-header/styles.css';
 import AllPics from './components/AllPics';
 import AllCategories from './components/AllCategories';
 import CategoryDetails from './components/CategoryDetails';

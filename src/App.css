@@ -24,10 +24,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +31,1029 @@
   to {
     transform: rotate(360deg);
   }
+}
+*{-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+.gotDisappear {
+  display: none;
+}
+.gotBack {
+  display: block;
+}
+/* header */ 
+.header--container {
+  width: 100%;
+  padding-top: 40px;
+  z-index: 9998;
+}
+
+.header {
+  transition: all ease .1s;
+  margin: auto;
+  width: 92%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;}
+
+  .header--logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 10%;
+    text-align: center;
+}
+  .header--logo img {
+    max-height: 78px;
+}
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.header a {
+  font-weight: 900;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.header--black .header--links {
+  border-top: solid 1px #000;
+  border-bottom: solid 1px #000;
+}
+
+.header--links--left {
+  position: relative;
+  padding: 0 15px;
+}
+.header--links--right {
+  padding: 0 5px;
+}
+.header--user--control--sticky {
+  order: 3;
+  flex-grow: 1;
+  position: absolute;
+  display: flex;
+  top: 0px;
+  margin-left: 1em;
+  justify-content: flex-start;
+  pointer-events: none;
+}
+.header--user--control--sticky a {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #024d4c;
+  right: 15%;
+  border-right: 1px solid #000;
+}
+.header--links {
+  width: 43%;
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header--links ul {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header--links ul li {
+  position: relative;
+  padding: 12px 0px;
+  text-align: center;
+}
+
+.header--black .header--links ul li .header--link--dropdown {
+  background-color: #fff;
+}
+
+.header--links ul li .header--link--dropdown.hide{
+  display: none;
+  min-width: 100%!important;
+  top: 44px;
+  left: 0;
+  z-index: 9999;
+  position: absolute;
+  background-color: rgba(200,200,200,.7);
+  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
+}
+
+.header--links ul li .header--link--dropdown.show{
+  display: normal!important;
+  min-width: 100%!important;
+  top: 44px;
+  left: 0;
+  z-index: 9999;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
+}
+
+.header--black .header--links ul li .header--link--dropdown a {
+  color: #000;
+  border-top: solid 1px #000;
+}
+.header--links ul li .header--link--dropdown a {
+  text-transform: uppercase;
+  display: block;
+  border-top: solid 1px #fff;
+  text-align: center;
+  font-size: 13.6px;
+  color: #fff;
+  padding: 10px 15px;
+}
+.header--links ul li a {
+  text-transform: uppercase;
+  font-family: lato,sans-serif;
+  font-size: 13.4px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  text-decoration: none;
+}
+/* sticky header */ 
+
+.header.header--black.sticky {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 10000;
+  justify-content: normal;
+}
+.header.header--black.sticky .header--logo{
+  position: inherit;
+}
+.header.header--black.sticky .header--logo img {
+  max-height: 40px;
+} 
+.header.header--black.sticky .header--user--control--sticky {
+  right: 0px;
+  top: 13px;
+}
+
+.header.header--black.sticky .header--links.header--links--left {
+margin-left: 100px;
+}
+.header.header--black.sticky .header--links {
+  border: none;
+}
+.header.header--black.sticky .header--links ul {
+  justify-content: space-around;
+}
+
+
+/* photos wrapper */
+
+.wedding--breadcrumb {
+  width: 92%;
+  max-width: 1100px;
+  margin: 120px auto 0;
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.wedding--breadcrumb .wedding--breadcrumb--link {
+  line-height: 30px;
+  height: 30px;
+  margin: 0;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 900;
+  color: #010101;
+}
+.wedding--breadcrumb .wedding--breadcrumb--link.active{
+color: #024d4c;
+}
+.wedding--breadcrumb .wedding--breadcrumb--link.active a{
+  color: #024d4c;
+  } 
+
+.wedding--breadcrumb .fa-angle-right {
+  line-height: 30px;
+  height: 30px;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 7.5px;
+}
+
+.photos--wrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  max-width: 1100px;
+  margin: 30px auto 0;
+}
+
+.filters--container {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  position: relative;
+  box-sizing: border-box;
+  margin-right: 25px;
+}
+
+.filters--radio {
+  margin-top: 15px;
+  padding-left: 6px;
+  display: flex;
+  flex-direction: column;
+}
+.filters--actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.filters--actions--clear {
+  background-color: #fff;
+  color: #000;
+  border: solid 1px #000;
+  padding-right: 10px;
+  padding-left: 10px;
+  height: 21px;
+}
+
+.filters--actions button {
+  vertical-align: middle;
+  padding: 0;
+  border: solid 1px #000;
+  width: 55px;
+  height: 21px;
+  margin-left: 3px;
+  font-size: 12px;
+  text-align: center;
+}
+.filters--actions--apply {
+  background-color: #000;
+  color: #fff;
+}
+
+.vendors--search--inputs.posts {
+  margin: 20px 0;
+}
+.vendors--search--inputs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.vendors--search--inputs.posts input[type=text] {
+  width: 100%;
+  border: 1px solid #000;
+  padding: 5px;
+}
+.photos--container--Main {
+  width: 70%;
+}
+.photos--container--Main.gotBack .image-container {
+  width: 33.3%!important;
+  float: left;
+}
+.photos--container {
+  width: 100%;
+}
+
+.photos--container .row {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap
+}
+
+.row:before, .row:after {
+  content: " ";
+  display: table;
+}
+
+
+.photos--container .image-container  {
+  width: 33.33%;
+}
+
+.photos--container a {
+  color: #337ab7;
+  text-decoration: none;
+  width: 33.33%;
+
+}
+
+
+.photo--container .bg-img {
+  height: 230px;
+  margin: 0px 5px;
+}
+.photo--container h3 {
+  color: #000;
+  font-size: 17.3px;
+  line-height: 25px;
+  font-weight: 700;
+  margin: 10px 0 15px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  height: 50px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.bg-img {
+  object-fit: contain;
+  background-size: cover!important;
+  background-position: center!important;
+}
+
+.bg-img img{
+width: 100%;
+height: 100%;
+}
+/* Bottom section */
+.bottom-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  margin: 50px auto 40px;
+}
+
+.bottom-section h3 {
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.25;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.bottom-section h3  a {
+  color: black;
+  text-decoration: none;
+  cursor:text;
+}
+.wedding-tools {
+  margin: 30px auto 25px;
+  float: none;
+}
+
+.wedding-tools .col-md-4 {
+    width: 33%;
+    float: left;
+    margin-bottom: 20px;
+    min-height: 210px;
+}
+
+.wedding--tools--tool {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.wedding--tools--tool .wedding--tools--tool--icon {
+  margin-right: 52px;
+  width: 90px;
+}
+
+.wedding--tools--tool .wedding--tools--tool--icon img {
+  width: 90px;
+  margin: 30px;
+}
+
+.wedding--tools--tool .wedding--tools--tool--icon .img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.wedding--tools--tool .wedding--tools--tool--info h4 {
+  margin: 0;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.39;
+  letter-spacing: .7px;
+  text-align: left;
+}
+
+.wedding--tools--tool .wedding--tools--tool--info span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: .5px;
+  text-align: left;
+}
+
+.wedding--tools--tool .wedding--tools--tool--info a {
+  display: block;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: .5px;
+  text-align: left;
+  color: #024d4c;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+/* footer */ 
+
+.footer--background {
+  background-color: #000;
+  width: 100%;
+  direction: ltr!important;
+}
+.footer--background .text--left {
+  display: inline-block;
+  width: 33%;
+  font-size: 8px;
+  color: #fff;
+  margin-left: 1%;
+  text-align: left;
+}
+.footer--background .company--logo {
+  font-size: 20px;
+}
+
+.social--media--links span a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+.footer--background .text--center{
+  display: inline-block;
+  width: 33%;
+  font-size: 10px;
+  font-weight: 100;
+  color: #fff;
+  position: relative;
+  margin: auto;
+  text-align: left;
+  font-weight: bold;
+}
+.footer--background .text--center a {
+  text-decoration: none;
+  color: #23527c;
+}
+.footer--background .text--right {
+  display: inline-block;
+  color: #fff;
+  font-size: 10px;
+  text-decoration: none;
+  padding-right: 80px;
+}
+.footer--background .text--right a {
+  color: #fff;
+}
+.text--right ul {
+  text-align: right;
+  list-style-type: none;
+}
+.text--right ul, .text--right ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* all categories */ 
+
+.vendors--search {
+  width: 90%;
+  max-width: 1070px;
+  margin: 35px auto 10px;
+  margin-top: 10%;
+}
+
+.vendors--search--inputs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.vendors--search--dropdown {
+  border: solid 2px #000;
+  width: 49%;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 2px 0px;
+}
+.vendors--search--dropdown h5 {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 4.1px;
+  text-transform: uppercase;
+  
+  margin:0px;
+}
+.vendors--search--dropdown div {
+  border-right: solid 2px #000;
+  border-bottom: solid 2px #000;
+  height: 16px;
+  width: 16px;
+  transform: rotate(
+45deg);
+  margin-left: 30px;
+  margin-top: -6px;
+}
+
+.vendors--search--input {
+  height: 43px;
+  width: 49%;
+  position: relative;
+}
+.vendors--search--input input {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 6.1px;
+  text-transform: uppercase;
+  color: #024d4c;
+  opacity: 1;
+  width: 98%;
+  height: 100%;
+  border: solid 2px #000;
+  text-align: center;
+  
+}
+
+.vendors--search--categories--container {
+  position: relative;
+  height: 140px;
+  display: block;
+  margin-top: 10px;
+  background-color: #000;
+  color: #fff;
+}
+
+.vendors--search--categories--previous {
+  position: absolute;
+  opacity: 1;
+  left: 11px;
+  top: 50px;
+  color: white;
+  z-index: 9998;
+  font-size: 20px;
+  transition: all ease .3s;
+  border: none;
+  background-color: transparent;
+}
+
+
+.vendors--search--categories--next {
+  opacity: 1;
+  position: absolute;
+  right: 11px;
+  top: 50px;
+  color: white;
+  z-index: 9998;
+  font-size: 20px;
+  transition: all ease .3s;
+  border: none;
+  background-color: transparent;
+}
+
+.vendors--search--categories--next a ,
+.vendors--search--categories--previous a
+{
+  text-decoration: none;
+}
+.vendors--search--categories--next.disabled,
+.vendors--search--categories--previous.disabled {
+  pointer-events: none;
+  cursor: none;
+  color: #000;
+}
+.vendors--container.container .bg-img img {
+  width: auto;
+}
+
+/* form here we going show categories*/
+.vendors--search--categories {
+  opacity: 1;/* this is to hide*/
+  width: 98%;
+  margin: 0 auto;
+  color: #fff;
+  transition: all ease .3s;
+}
+.vendors--search--categories--container{
+  overflow: hidden;
+}
+.slick-slider {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-initialized .slick-slide .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  left:0px;
+}
+
+.slick-initialized .slick-slide .row .item {
+  height: 105px; 
+  width: 105px;
+  margin: 0px 7px;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+  margin: 8px 15px;
+}
+
+.slick-slide a{
+  width: 100%;
+  display: inline-block;
+  color: #337ab7;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.slick-slide a .vendors--search--category--container {
+  height: 140px;
+}
+
+.slick-slide a .vendors--search--category {
+  height: 85%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.slick-slide a .vendors--search--category img {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin: 10px 0;
+    display: block;
+    border: 0;
+}
+.slick-slide a .vendors--search--category .img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+
+.vendors--container {
+  position: relative;
+  max-width: 1070px;
+  padding: 0;
+  width: 90%;
+  max-width: 1070px;
+  margin: 0px auto;
+  text-align: left;
+}
+
+/* pagination */ 
+
+.pagination {
+  display: flex;
+  list-style: none;
+  margin: 20px auto;
+  padding: 0;
+  justify-content: center;
+ }
+ 
+
+ 
+ .pagination li:not(.disabled) a:hover {
+  background-color: rgb(209, 194, 242);
+  cursor: pointer;
+ }
+ 
+
+
+ .pagination li a {
+  cursor: default;
+ padding: 6px 12px;
+ line-height: 1.428571429;
+ text-decoration: none;
+ color: #024d4c;
+ background-color: #fff;
+ border: 1px solid #ddd;
+ margin-left: -1px;
+ width: 100%;
+ text-align: left;
+
+}
+
+ 
+.pagination li.active a {
+  color: #fff;
+  background: #024d4c;
+  border: 1px solid #024d4c;
+ }
+ 
+ .pagination li.disabled a {
+  pointer-events: none;
+  color: rgb(198, 197, 202);
+ }
+
+ .pagination .break {
+   pointer-events: none;
+ }
+
+
+ /* single photo */ 
+ .single-photo--photos--container {
+  display: flex;
+  flex-direction: row;
+  width: 92.5%;
+  max-width: 1100px;
+  margin: 15px auto 50px;
+ }
+
+ .single-photo--photos--container .bg-img
+ {
+  display: block;
+  max-width: 100%;
+  height: auto;
+ }
+
+ .single-photo--photos--container .row {
+   width: 63%;
+ }
+ .photo--description {
+  text-align: left;
+  width: 37%;
+  padding: 15px 20px;
+}
+
+.photo--description--links--social .fa-facebook-f {
+  padding-left: 11px;
+}
+.photo--description--links--social svg {
+  border-radius: 50%;
+  height: 34px!important;
+  width: 34px!important;
+  background-color: #000;
+  font-size: 22px;
+  padding: 0px 6px;
+  color: #fff;
+  margin-right: 5px;
+}
+
+
+/* mobile screen */
+@media (max-width: 767px) 
+{
+  .header--container {
+    padding-top: 1px;
+ }
+ 
+   .header--logo img {
+     max-height: 40px;
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 5;
+     margin: 5px auto;
+ }
+
+ .header--links.header--links--left {
+   display: none;
+ }
+ .header--links.header--links--right {
+  display: none;
+}
+
+.header--user--control--sticky {
+  left: 10px;
+  top: 15px;
+  padding-left: 0;
+  z-index: 9999;
+}
+
+
+  .photos--wrapper {display: block;}
+  .filters--container { width: 100%;}
+  .photos--container--Main {
+    width: 100%;
+  }
+  .photos--container--Main.gotBack .image-container {
+    width: 100%!important;
+    float: none;
+  }
+  .bottom-section h3 {
+    font-size: 19px;
+    line-height: 23.75px;
+  }
+  .wedding-tools .col-md-4 {
+    width: 100%;
+    float: none;
+  }
+  .footer--background .text--left,
+  .footer--background .text--center,
+  .footer--background .text--right
+{
+width: 100%!important;
+text-align: center!important;
+margin: 1px auto!important;
+padding: 0px!important;
+display: block!important;
+}
+.footer--background .text--left h1 {
+  margin: 8px;
+}
+.footer--background .text--right ul {
+  text-align: center;
+  padding: 0px;
+}
+.vendors--search--dropdown {
+  width: 49%;
+  margin: 10px auto;
+  padding: 0px;
+  font-size: 9px!important;
+  letter-spacing: 1px!important;
+  font-weight: 400;
+}
+.vendors--search--dropdown h5 {
+  font-size: 9px!important;
+  letter-spacing: 1px!important;
+  font-weight: 400;
+}
+
+.vendors--search--input {
+  width: 49%;
+  margin: 10px auto ;
+  padding: 0px;
+ 
+}
+.vendors--search--input input {
+  width: 100%;
+  font-size: 9px!important;
+  letter-spacing: 1px!important;
+  font-weight: 400;
+}
+.vendors--container.container .bg-img img {
+  width: 100%;
+}
+.vendors--container.container h3{
+  text-align: center;
+}
+.vendors--search--categories--next.disabled,
+.vendors--search--categories--previous.disabled {
+  pointer-events:fill;
+  cursor: pointer;
+  color: white;
+}
+}
+/* small screen */ 
+@media (min-width: 767px) and (max-width: 991px) 
+{
+  
+  .header--links ul li a {
+      font-size: 8.8px!important;
+  }
+  .header--user--control--sticky{
+    top: -25px;
+  }
+  .photos--container--Main.gotBack .image-container {
+    width: 50%!important;
+  }
+  .header.header--black.sticky .header--links ul li a {
+    font-size: 8.8px!important;
+}
+.header.header--black.sticky .header--links {
+  width: 42%
+}
+.header.header--black.sticky .header--links.header--links--left {
+  margin-left: 50px;
+}
+.header--links--left {
+  position: relative;
+  padding: 0 7px;
+}
+.wedding-tools .col-md-4 {
+  width: 50%;
+}
+.bottom-section {
+  width: 750px;
+}
+
+
+  }
+
+/* medium screen */
+@media (min-width: 991px) and (max-width: 1199px)
+{
+  .header.header--black.sticky .header--links ul {
+      position: relative;
+      left: -30px }
+    
+
+}
+/* large screen and xlarge  */ 
+@media (min-width: 1200px){}
+
+/* bar */ 
+.icon.hide {
+  display: none;
+}
+.icon.show{
+  display: block;
+}
+.bar-nav {
+  display: flex;
+  background: white;
+  padding: 0 10px;
+}
+
+.bar-nav .link {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+}
+
+.bar-nav .menu {
+  width: 100vw;
+  opacity: 0;
+  position: absolute;
+  top: 50px; 
+  right: 0px;
+  background: #ededed;
+  padding: 10px;
+  text-align: center;
+  transition: all 1000ms ease;
+}
+
+.bar-nav .menu.open {
+  opacity: 1;
+  background-color: #282a27;
+  color: white;
+}
+
+.bar-nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+.bar-nav ul li {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+  width: 50%;
+  position: relative;
+  font-size: 15px;
+  text-decoration: none;
+}
+.bar-nav ul li a {
+  color: white;
+  text-decoration: none;
 }

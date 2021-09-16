@@ -1,25 +1,41 @@
-import logo from './logo.svg';
+import React, { Component } from "react";
 import './App.css';
+import 'react-sticky-header/styles.css';
+import AllPics from './components/AllPics';
+import AllCategories from './components/AllCategories';
+import CategoryDetails from './components/CategoryDetails';
+import PhotoDetails from './components/PhotoDetails';
+import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'
+import {handleInitialData} from './actions/shared'
+import { connect } from 'react-redux'
+ 
 
-function App() {
+class App extends Component {
+  componentDidMount() {
+    this.props.handleInitialData()
+  }
+ render() {
   return (
+    <Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+       <Route exact path="/" component={AllPics} />
+       <Route exact path={`/categories`}  component={AllCategories} />
+       <Route exact path={`/categories/:category_id`}  component={CategoryDetails} />
+       <Route exact path={`/categories/:category_id/:photo_id`}  component={PhotoDetails} />
+       </Switch>
+       
     </div>
-  );
+    </Router>
+);
+}
 }
 
-export default App;
+function mapStateToProps (store) {
+  return {
+    list: Object.values(store.categories)
+  }
+}
+
+
+export default connect(mapStateToProps,{handleInitialData})(App);

@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { connect } from 'react-redux'
 
 
-class SearchCompMain extends Component {
+class SearchCompMain extends Component { 
+  // here we don't need any id to send or pass through our pagination comp cause we will present the whole pics
     state={
         query: '',
         showingResults: '',

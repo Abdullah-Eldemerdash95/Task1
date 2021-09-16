@@ -1,5 +1,5 @@
 # Getting Started 
-- npm install then we will need to run first apiData.js to run our fake api server 
+- npm install then we will need to run first json-server apiData.js to run our fake api server 
 - then we npm start and you to stick with order so when u use npm start will ask u to run on another port 
 - after starting app due to requirements we have app u can deal like this 
 

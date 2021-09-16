@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import { connect } from 'react-redux'
 
 class PaginationCompMain extends Component {
-
+// this one is for the whole pics 
  state = {
    list: [],
    perPage:15, // cause the order map in each loop he took an object of each one of the 15

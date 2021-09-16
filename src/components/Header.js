@@ -5,9 +5,9 @@ import {Link} from 'react-router-dom'
 import { connect } from 'react-redux'
 import Hello from '../components/Hello.js'
 
-class Header extends Component {
+class Header extends Component { // this section built manually cause u prohibtied bootstrap 
     state={
-        shenpo:{
+        shenpo:{ // these arrays so i can control to show drop down menu of each li in header
             a: ['360 Planner','hide'],b: ['Her','hide'],c: ['Him','hide']
             ,d: ['The Wedding', 'hide'],e:['Vendors','hide'], f: ['Gallery','hide']
             ,g: ['Ideas & More', 'hide']
@@ -17,7 +17,8 @@ class Header extends Component {
         postion: '',
         icon: 'hide'
       }
-      componentDidMount () {
+      componentDidMount () { // this to control when Header become sticky through certain number of scroll
+                              // and showing icon box of Header in mobile depending on resize
         window.addEventListener('scroll', this.handleScroll);
         window.addEventListener('resize', this.handleResize);
     }
@@ -63,7 +64,8 @@ handleResize = () => {
     })})
 }
 
-    render() {
+    render() { // here we have in gallery drop dow menu a single category and it's the first one so we get it's data 
+                // to put inside the link so when choosed it can pass all needed data 
       const {list}=this.props
       const zile = (Object.values(Object.assign({},(list).filter(x=> x.id === 0))))
       const zileId = (zile.map(k=> k.id))[0]
@@ -189,79 +191,3 @@ function mapStateToProps (store) {
 
 
 export default connect(mapStateToProps,)(Header);
-
-/*
-<div class="header--mobile--button">
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-<span class="sr-only">Toggle navigation</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-</div>
-
-<div class="header--links--mobile" style="display: block;">
-<div class="header-wrapper">
-<div class="header--links--mobile--link header--links--mobile--link--half header--links--mobile--link--bordered--right header--links--mobile--link--bordered--bottom">
-<a href="/en/360planner">
-<img class="header-icon img-responsive" src="https://weds360.com/assets/planningtools-e27783fe8e0ed7bf48b9e63a977b6357fc8a64064828a4c5a005470263d9d7dc.png" alt="Planningtools">
-<p>360 planner</p>
-</a>
-</div>
-<div class="header--links--mobile--link header--links--mobile--link--half header--links--mobile--link--bordered--bottom">
-<a href="/en/categories?parent_menu=for_the_wedding">
-<img class="header-icon img-responsive" src="https://weds360.com/assets/forthewedding-b5002312f0a4f29574cb0cfcd4dc3809e9074cb8d717103e77dbf670952a4531.png" alt="Forthewedding">
-<p>For The Wedding</p>
-</a>
-</div>
-<div class="header--links--mobile--link header--links--mobile--link--half header--links--mobile--link--bordered--bottom header--links--mobile--link--bordered--right">
-<a href="/en/categories?parent_menu=for_him">
-<img class="header-icon img-responsive" src="https://weds360.com/assets/forhim-27ec12d8032c54ce06f2e1c5c5d0a07745cc45b5f13584c693bbfc1b5bb02889.png" alt="Forhim">
-<p>Him</p>
-</a>
-</div>
-<div class="header--links--mobile--link header--links--mobile--link--half header--links--mobile--link--bordered--bottom">
-<a href="/en/categories?parent_menu=for_her">
-<img class="header-icon img-responsive" src="https://weds360.com/assets/forher-942ae5c8439a2590a20e51cd7c246077be3059f66f636a7af7cc6bfc1dbd454b.png" alt="Forher">
-<p>Her</p>
-</a>
-</div>
-<div class="header--links--mobile--link header--links--mobile--link--quarter header--links--mobile--link--bordered--bottom header--links--mobile--link--bordered--right">
-<a href="/en/checklists">
-<img class="header-icon img-responsive" src="https://weds360.com/assets/checklist-5d1de44899b7031df27ea413c3b12e912f5bbf6a917ee47f0898f035de79c5d9.png" alt="Checklist">
-<p>Check list</p>
-</a>
-</div>
-<div class="header--links--mobile--link header--links--mobile--link--quarter header--links--mobile--link--bordered--bottom header--links--mobile--link--bordered--right">
-<a href="/en/guestlist">
-<img class="header-icon img-responsive" src="https://weds360.com/assets/guestlist-6b09f4690b2e2782f1d453654e3e4660043e6ed0068ca419b2a423022ad9628b.png" alt="Guestlist">
-<p>Guest list</p>
-</a>
-</div>
-<div class="header--links--mobile--link header--links--mobile--link--quarter header--links--mobile--link--bordered--bottom header--links--mobile--link--bordered--right" style="height: 111px;">
-<a href="/en/registry">
-<img class="header-icon img-responsive" src="https://weds360.com/assets/registry-b306895e7cd0e760b67ab55b883e8dfdcf7cfc284e9bdf8b6b560a325965411b.png" alt="Registry">
-<p>Registry list</p>
-</a>
-</div>
-<div class="header--links--mobile--link header--links--mobile--link--quarter header--links--mobile--link--bordered--bottom">
-<a href="/en/budgeter">
-<img class="header-icon img-responsive" src="https://weds360.com/assets/budgeter-fd97545a9478c304d4427ec1e7b8583f028d56a642111e124a40a44442012191.png" alt="Budgeter">
-<p>Budgeter</p>
-</a>
-</div>
-<div class="header--links--mobile--link header--links--mobile--link--half header--links--mobile--link--bordered--bottom header--links--mobile--link--bordered--right">
-<a href="/en/categories?parent_menu=photos">
-<img class="header-icon img-responsive" src="https://weds360.com/assets/icons/tools-vision-white-28d34c7bf940dca78a1217508870e3d1c64fed89add64751e7180c9d78b868e5.png" alt="Tools vision white">
-<p>Gallery</p>
-</a>
-</div>
-<div class="header--links--mobile--link header--links--mobile--link--half header--links--mobile--link--bordered--bottom" style="height: 108px;">
-<a href="/en/categories?parent_menu=posts">
-<img class="header-icon img-responsive" src="https://weds360.com/assets/white-articles-6582f1a71029081a3d38b9928bd4d66f7b2e3604c06867118dc8e024a785c251.png" alt="White articles">
-<p>Ideas &amp; More</p>
-</a>
-</div>
-
-</div>
-</div>*/

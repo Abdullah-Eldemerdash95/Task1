@@ -55,15 +55,18 @@ decreaseFn = (e) => {
         })
       }
   }
+/* 
+the 2 fn above is to controll dropdown menu of categories by add the number we add to position for whole object that have all categories
+but we did that after a certain number that arrow hide so it stop there when u reach last one
+*/
 
-
-showCategories = () => {
+showCategories = () => {// it for showing drop down menu through toggling arrow
   this.setState({
     displayStatus: (this.state.displayStatus === 'block') ? 'none' : 'block'
   })
 }
 
-changeQuery = (e) => {
+changeQuery = (e) => { // it's fn of changing query and showing the section that have result and this by add custom class to div 
   if ((e.target.value).length > 0) { this.setState({
     query: e.target.value,
     displayStatus2: 'gotBack'
@@ -75,10 +78,10 @@ changeQuery = (e) => {
   }
 }
 
-    render() {
-      const {list} = this.props
+    render() { // all using of Data depnding on console.log each stage to know the right type of Data and take next step
+      const {list} = this.props 
       const xiles = (Object.values(Object.assign({},(list).filter(x=> ((x.name).toLowerCase()).includes(this.state.query)))))
-      const categoriesSearchResults = xiles.map(
+      const categoriesSearchResults = xiles.map( // after searching and get array of result now we presented in const then show it in ui
         catego => {
           return (
             <div className="catego" key={(catego.id) + ( catego.name)}>
@@ -100,7 +103,7 @@ changeQuery = (e) => {
           )
         }
       )
-      const zizi = list.map(item => {return (
+      const zizi = list.map(item => {return ( // this is for showing the list of categories without searching
             <div className='item' key={item.id}>
               <Link to={{
             pathname: `/categories/${item.id}`,
@@ -120,8 +123,8 @@ changeQuery = (e) => {
 
         return (
             <Fragment>
-<Header/>
-          <div className="vendors--search">
+            <Header/>   
+          <div className="vendors--search"> {/* here we use static jsx to show dropdownmenu of categories and search input field */}     
             <div className="vendors--search--inputs">
               <div className="vendors--search--dropdown">
               <h5>Find categories here</h5>
@@ -148,8 +151,8 @@ changeQuery = (e) => {
                       {categoriesSearchResults}
                     </div>
               </div>
-<BottomSec></BottomSec>
-<Footer></Footer>
+            <BottomSec></BottomSec>
+            <Footer></Footer>
 
           </Fragment>
           );

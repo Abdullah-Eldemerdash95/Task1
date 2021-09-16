@@ -4,7 +4,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import {Link} from 'react-router-dom'
 
 
-class Hello extends Component {
+class Hello extends Component {// from internet icon box for using when reaching mobile size
     render() {
       return <div className="bar-nav">
         <Saton />
@@ -34,7 +34,8 @@ class Hello extends Component {
               <li>The Wedding</li>
               <li>Vendors</li>
               <li><Link  to={'/'}>Gallery</Link></li>
-              <li><Link  to={'/categories'}>categories</Link></li>
+              <li><Link  to={'/categories'}>categories</Link></li> 
+              {/* i put categories here cause he can't reach from first click with more like in full screen */}
               <li>Ideas & More</li>
             </ul>
           </div>

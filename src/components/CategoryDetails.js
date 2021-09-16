@@ -8,7 +8,7 @@ import SearchComp from '../components/SearchComp'
 
 class CategoryDetails extends Component {
     
-    render() {
+    render() { // here it show that when u click on category u got some props through Link usage but we will need that data to show all pics
       const {location} = this.props;
       const id = location.state.id;
       const name = location.state.name;
@@ -26,6 +26,7 @@ class CategoryDetails extends Component {
                     </h2>
             </div>
                 <SearchComp id={id} />
+                 {/* when we choose certain category we should pass it's id to search comp then to pagintion comp to it's whole data */}
                 <BottomSec></BottomSec>
                 <Footer></Footer>
             </Fragment>

@@ -22,7 +22,7 @@ class PhotoDetails extends Component {
             }
 
     render() {
-      const {location} = this.props;
+      const {location} = this.props; // this when we click on pics we get whole details from link and then get what we need
       const categoryNumber = location.state.categoryNumber;
       const categoryName = location.state.categoryName;
       const title = location.state.title;

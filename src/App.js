@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import './App.css';
-import 'react-sticky-header/styles.css';
 import AllPics from './components/AllPics';
 import AllCategories from './components/AllCategories';
 import CategoryDetails from './components/CategoryDetails';
@@ -12,6 +11,9 @@ import { connect } from 'react-redux'
 
 class App extends Component {
   componentDidMount() {
+    /* we use the main function or as said action creator with async fetch call here in app js so we can use this 
+      inside store without calling it each time inside component did mount we did that only in Main component app.js
+      - Any calls for data be called inside compDidMount */
     this.props.handleInitialData()
   }
  render() {
@@ -30,12 +32,5 @@ class App extends Component {
 );
 }
 }
-
-function mapStateToProps (store) {
-  return {
-    list: Object.values(store.categories)
-  }
-}
-
-
-export default connect(mapStateToProps,{handleInitialData})(App);
+// we use connect so we can pass data through mapStateToProps and if we want pass function as props 
+export default connect(null,{handleInitialData})(App);

@@ -4,13 +4,13 @@ import {Link} from 'react-router-dom'
 import { connect } from 'react-redux'
 
 class PaginationComp extends Component {
-
+// we used React-Paginate to make easier we did the calls for api fetching data in app.js so here we only get data from store and use it
  state = {
    perPage: 9,
    page: 0,
    pages: 0,
  };
-
+// we made 2 pagination comp one for each category when it's pressed and it's this one but the another is for when we call for all pics 
  componentDidMount = () => {
       const {perPage} = this.state;
       this.setState({

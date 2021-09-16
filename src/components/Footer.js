@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook , faInstagram} from '@fortawesome/free-brands-svg-icons'
 
 
-class Footer extends Component {
+class Footer extends Component { // copied section 
     render() {
         return (
             <Fragment>

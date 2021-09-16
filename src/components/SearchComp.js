@@ -5,13 +5,13 @@ import { connect } from 'react-redux'
 
 
 class SearchComp extends Component {
+   // this is the search comp within category pics so don't forget id we got from our category click to show it's pics by this id 
     state={
         query: '',
         showingResults: '',
         displayStatus1: 'gotBack',
         displayStatus2: 'gotDisappear'
       }
-  
 
     searchValChange= (e) => {
         this.setState({

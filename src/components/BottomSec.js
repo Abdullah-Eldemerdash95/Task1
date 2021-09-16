@@ -2,8 +2,8 @@ import React, { Component, Fragment } from "react";
 
 class BottomSec extends Component {
 
-    render() {
-        return (
+    render() {// it's copied section from dev tools as it's in site as static jsx
+        return ( 
             <Fragment>
             <div className="bottom-section container">
               <h3>Wedding Planning is a piece of cake with Weds360.
